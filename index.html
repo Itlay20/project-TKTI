@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kecerdasan Buatan & Pembelajaran Mandiri</title>
+    <style>
+        /* Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 20px 30px;
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.5);
+        }
+
+        header h1 {
+            margin: 0;
+            font-weight: 700;
+            font-size: 2rem;
+            letter-spacing: 1.2px;
+        }
+
+        nav {
+            margin-top: 15px;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav button {
+            background: transparent;
+            border: none;
+            color: #dbeafe; /* Light Indigo */
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 10px 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background-color 0.25s ease, color 0.25s ease;
+        }
+
+        nav button:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        nav button.active {
+            background-color: white;
+            color: #5a2d82;
+            font-weight: 700;
+            box-shadow:
+                0 4px 6px rgba(90, 45, 130, 0.35);
+        }
+
+        main {
+            flex-grow: 1;
+            max-width: 900px;
+            margin: 30px auto 50px;
+            background: white;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow:
+                0 4px 6px rgba(50, 50, 93, 0.11),
+                0 1px 3px rgba(0, 0, 0, 0.08);
+            border-top: 6px solid #4f46e5;
+        }
+
+        section {
+            display: none;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        /* Home section styles */
+        #home-section {
+            text-align: center;
+            color: #4f46e5;
+        }
+        #home-section p {
+            font-size: 1.2rem;
+            margin-top: 1.2em;
+            color: #374151;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.5;
+        }
+
+        /* Article styles */
+        h2 {
+            font-size: 1.75rem;
+            margin-top: 2.5em;
+            margin-bottom: 0.6em;
+            border-bottom: 3px solid #a5b4fc;
+            padding-bottom: 6px;
+            color: #3730a3;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #4b5563;
+            margin-bottom: 1.2em;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5em;
+            color: #374151;
+            font-size: 1.125rem;
+            margin-bottom: 2em;
+        }
+
+        ul li {
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+        }
+
+        /* Hover effect on article points */
+        ul li:hover {
+            color: #4f46e5;
+            cursor: default;
+            transition: color 0.3s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            main {
+                margin: 20px 15px 40px;
+                padding: 30px 25px;
+            }
+            header h1 {
+                font-size: 1.5rem;
+            }
+            nav button {
+                font-size: 1rem;
+                padding: 8px 12px;
+            }
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 1.8em;
+            }
+            p, ul {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Kecerdasan Buatan & Pembelajaran Mandiri</h1>
+        <nav>
+            <button id="home-btn" class="active" aria-controls="home-section" aria-selected="true" role="tab">Beranda</button>
+            <button id="article-btn" aria-controls="article-section" aria-selected="false" role="tab">Artikel</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home-section" class="active" role="tabpanel" tabindex="0" aria-labelledby="home-btn">
+            <h2>Selamat Datang di Portal Pembelajaran</h2>
+            <p>
+                Pelajari bagaimana kecerdasan buatan dapat mendukung pembelajaran mandiri secara efektif dan menarik.
+                Gunakan navigasi di atas untuk membaca artikel lengkapnya dan memahami manfaat AI dalam pendidikan.
+            </p>
+        </section>
+
+        <section id="article-section" role="tabpanel" tabindex="0" aria-labelledby="article-btn">
+            <h1>Pemanfaatan Kecerdasan Buatan dalam Mendukung Pembelajaran Mandiri</h1>
+
+            <h2>Latar Belakang dan Masalah</h2>
+            <p>
+                Artikel ini membahas tentang bagaimana perkembangan teknologi modern, khususnya kecerdasan buatan (AI), dapat dimanfaatkan dalam dunia pendidikan untuk meningkatkan kemampuan dan pengetahuan peserta didik. Selain mendukung pembelajaran di sekolah atau kampus, AI juga dapat mendukung pembelajaran secara mandiri.
+            </p>
+
+            <h2>Hipotesis/Solusi</h2>
+            <p>
+                Artikel ini mengeksplorasi bagaimana pemanfaatan teknologi AI dapat mendukung pembelajaran mandiri. Penulis berhipotesis bahwa AI dapat menjadi alat yang efektif untuk meningkatkan kemandirian dan efektivitas pembelajaran peserta didik.
+            </p>
+
+            <h2>Metode yang Digunakan</h2>
+            <p>
+                Penelitian ini menggunakan studi pustaka sebagai metode penelitiannya. Data yang dikumpulkan dipelajari dan dipahami dari berbagai sumber literatur yang relevan.
+            </p>
+
+            <h2>Hasil yang Didapatkan</h2>
+            <p>Hasil penelitian menunjukkan bahwa AI dapat dimanfaatkan dalam berbagai bentuk untuk mendukung pembelajaran mandiri, seperti:</p>
+            <ul>
+                <li>Tutor virtual personal</li>
+                <li>Sistem pembelajaran adaptif</li>
+                <li>Chatbot pembelajaran</li>
+                <li>Pembelajaran berbasis game</li>
+                <li>Sistem penilaian berbasis AI</li>
+                <li>Analisis data pendidikan</li>
+                <li>Evaluasi otomatis</li>
+            </ul>
+        </section>
+    </main>
+
+    <script>
+        const homeBtn = document.getElementById('home-btn');
+        const articleBtn = document.getElementById('article-btn');
+        const homeSection = document.getElementById('home-section');
+        const articleSection = document.getElementById('article-section');
+
+        function activateTab(selectedBtn, selectedSection) {
+            // Deactivate all buttons
+            [homeBtn, articleBtn].forEach(btn => {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-selected', 'false');
+            });
+            // Hide all sections
+            [homeSection, articleSection].forEach(section => section.classList.remove('active'));
+
+            // Activate selected button and show respective section
+            selectedBtn.classList.add('active');
+            selectedBtn.setAttribute('aria-selected', 'true');
+            selectedSection.classList.add('active');
+            selectedSection.focus();
+        }
+
+        homeBtn.addEventListener('click', () => {
+            activateTab(homeBtn, homeSection);
+        });
+
+        articleBtn.addEventListener('click', () => {
+            activateTab(articleBtn, articleSection);
+        });
+    </script>
+
+</body>
+</html>
+
